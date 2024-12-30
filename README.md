@@ -2,11 +2,9 @@
 PyTorch implementation of [**UniRestorer: Universal Image Restoration via Adaptively Estimating Image Degradation at Proper Granularity**](https://github.com/mrluin/UniRestorer)
 
 
+[![ArXiv](https://img.shields.io/badge/UniRestorer-ArXiv-red.svg)]()
+[![Paper](https://img.shields.io/badge/UniRestorer-Paper-blue.svg)](./assets/_arxiv_UniRestorer__Universal_Image_Restoration_via_Adaptively_Estimating_Image_Degradation_at_Proper_Granularity.pdf)
 
-## TODO
--  [ ] Paper and supplement release on arXiv.
--  [ ] Inference code and pre-trained models release.
--  [ ] Datasets, training code release.
 
 <hr />
 
@@ -20,6 +18,10 @@ In contrast to existing degradation-agnostic and -aware methods, UniRestorer can
 Experimental results show that our UniRestorer outperforms state-of-the-art all-in-one methods by a large margin, and is promising in closing the performance gap to specific single-task models.* 
 <hr />
 
+## 1. TODO
+-  [ ] Paper and supplement release on arXiv.
+-  [ ] Inference code and pre-trained models release.
+-  [ ] Datasets, training code release.
 
 ## 2. Method
 
