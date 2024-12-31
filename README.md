@@ -2,7 +2,7 @@
 PyTorch implementation of [**UniRestorer: Universal Image Restoration via Adaptively Estimating Image Degradation at Proper Granularity**](https://github.com/mrluin/UniRestorer)
 
 
-[![ArXiv](https://img.shields.io/badge/UniRestorer-ArXiv-red.svg)]()
+[![ArXiv](https://img.shields.io/badge/UniRestorer-ArXiv-red.svg)](https://arxiv.org/abs/2412.20157)
 [![Paper](https://img.shields.io/badge/UniRestorer-Paper-blue.svg)](./assets/_arxiv_UniRestorer__Universal_Image_Restoration_via_Adaptively_Estimating_Image_Degradation_at_Proper_Granularity.pdf)
 
 
