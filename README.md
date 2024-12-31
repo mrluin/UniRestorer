@@ -19,7 +19,7 @@ Experimental results show that our UniRestorer outperforms state-of-the-art all-
 <hr />
 
 ## 1. TODO
--  [ ] Paper and supplement release on arXiv.
+-  [x] **2024.12.31**: Paper and supplement files are released on ArXiv.
 -  [ ] Inference code and pre-trained models release.
 -  [ ] Datasets, training code release.
 
