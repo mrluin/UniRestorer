@@ -62,5 +62,11 @@ We thank to the following image restoration works for their awesome backbones an
 
 
 ## Citation
-
-Comming soon.
+```
+@article{lin2024unirestorer,
+  title={UniRestorer: Universal Image Restoration via Adaptively Estimating Image Degradation at Proper Granularity},
+  author={Lin, Jingbo and Zhang, Zhilu and Li, Wenbo and Pei, Renjing and Xu, Hang and Zhang, Hongzhi and Zuo, Wangmeng},
+  journal={arXiv preprint arXiv:2412.20157},
+  year={2024}
+}
+```
