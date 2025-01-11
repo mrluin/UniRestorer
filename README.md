@@ -49,6 +49,8 @@ Experimental results show that our UniRestorer outperforms state-of-the-art all-
 <img src = "./assets/compare_to_singletask_model.png"> 
 </details>
 
+More comparison resuslts can be found in supplement material or our [website](https://mrluin.github.io).
+
 ## Contact & Acknowledgement
 
 If you have any questions, please contact [jblincs1996@gmail.com](jblincs1996@gmail.com).
