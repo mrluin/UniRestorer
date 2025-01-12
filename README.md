@@ -1,10 +1,11 @@
-# UniRestorer
-PyTorch implementation of [**UniRestorer: Universal Image Restoration via Adaptively Estimating Image Degradation at Proper Granularity**](https://github.com/mrluin/UniRestorer)
+# UniRestorer: Universal Image Restoration via Adaptively Estimating Image Degradation at Proper Granularity
 
+---
 
-[![ArXiv](https://img.shields.io/badge/UniRestorer-ArXiv-red.svg)](https://arxiv.org/abs/2412.20157)
-[![Paper](https://img.shields.io/badge/UniRestorer-Paper-blue.svg)](./assets/_arxiv_UniRestorer__Universal_Image_Restoration_via_Adaptively_Estimating_Image_Degradation_at_Proper_Granularity.pdf)
-[![Web](https://img.shields.io/badge/UniRestorer-Web-purple.svg)](https://mrluin.github.io/)
+[Jingbo Lin](https://scholar.google.com/citations?user=zPycW30AAAAJ&hl=zh-CN&oi=ao), [Zhilu Zhang](https://scholar.google.com/citations?user=8pIq2N0AAAAJ&hl=zh-CN&oi=ao), [Wenbo Li](https://scholar.google.com/citations?user=foGn_TIAAAAJ&hl=zh-CN&oi=ao), [Renjing Pei](), [Hang Xu](https://scholar.google.com/citations?user=J_8TX6sAAAAJ&hl=zh-CN&oi=ao), [Hongzhi Zhang](https://scholar.google.com/citations?user=Ysk4WBwAAAAJ&hl=zh-CN&oi=ao), and [Wangmeng Zuo](https://scholar.google.com/citations?user=rUOpCEYAAAAJ&hl=zh-CN&oi=ao)
+
+[![ArXiv](https://img.shields.io/badge/Paper&Suppl-ArXiv-red.svg)]()
+[![Web](https://img.shields.io/badge/Project-Web-purple.svg)](https://mrluin.github.io)
 
 
 <hr />
@@ -19,19 +20,31 @@ In contrast to existing degradation-agnostic and -aware methods, UniRestorer can
 Experimental results show that our UniRestorer outperforms state-of-the-art all-in-one methods by a large margin, and is promising in closing the performance gap to specific single-task models.* 
 <hr />
 
-## 1. TODO
--  [x] **2024.12.31**: Paper and supplement files are released on ArXiv.
+### TODO
+
+
+-  [x] **2024.12.31**: Paper and supplement files are release on ArXiv.
 -  [ ] Inference code and pre-trained models release.
 -  [ ] Datasets, training code release.
 
-## 2. Method
+
+
+## Method
+
+---
+
 
 <p align="center"><img src="./assets/framework.png" width="95%"></p>
 
 <p>  Our method has three steps, constructing multi-granularity degradation set, train multi-granularity MoE restoration model, train degradation and granularity estimation-based routing. </p>
 
 
-## 3. Comparisons
+
+## Comparisons
+
+---
+
+
 <details>
 <summary><strong>All-in-One Image Restoration (single-degradation)</strong> (click to expand) </summary>
 
@@ -51,7 +64,37 @@ Experimental results show that our UniRestorer outperforms state-of-the-art all-
 
 More comparison resuslts can be found in supplement material or our [website](https://mrluin.github.io).
 
+
+
+[//]: # (## Dependencies )
+
+[//]: # ()
+[//]: # (---)
+
+
+
+## Datasets
+
+---
+
+Following instructions in [DATA.md](./DATA.md) to download training and testing data.
+
+
+
+
+
+[//]: # (## Training & Evaluation)
+
+[//]: # ()
+[//]: # (---)
+
+[//]: # ()
+[//]: # (Training instruction is provided in [TRAIN.md]&#40;./TRAIN.md&#41;.)
+
+
 ## Contact & Acknowledgement
+
+---
 
 If you have any questions, please contact [jblincs1996@gmail.com](jblincs1996@gmail.com).
 
@@ -63,8 +106,16 @@ We thank to the following image restoration works for their awesome backbones an
 - [MiOIR](https://github.com/Xiangtaokong/MiOIR)
 - [OneRestore](https://github.com/gy65896/OneRestore)
 
+Our code is based on [BasicSR](https://github.com/XPixelGroup/BasicSR) and [KAIR](https://github.com/cszn/KAIR).
+
+
+
 
 ## Citation
+
+---
+
+If our work is helpful, you can cite our work as follows:
 ```
 @article{lin2024unirestorer,
   title={UniRestorer: Universal Image Restoration via Adaptively Estimating Image Degradation at Proper Granularity},
