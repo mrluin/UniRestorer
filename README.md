@@ -1,7 +1,5 @@
 # UniRestorer: Universal Image Restoration via Adaptively Estimating Image Degradation at Proper Granularity
 
----
-
 [Jingbo Lin](https://scholar.google.com/citations?user=zPycW30AAAAJ&hl=zh-CN&oi=ao), [Zhilu Zhang](https://scholar.google.com/citations?user=8pIq2N0AAAAJ&hl=zh-CN&oi=ao), [Wenbo Li](https://scholar.google.com/citations?user=foGn_TIAAAAJ&hl=zh-CN&oi=ao), [Renjing Pei](), [Hang Xu](https://scholar.google.com/citations?user=J_8TX6sAAAAJ&hl=zh-CN&oi=ao), [Hongzhi Zhang](https://scholar.google.com/citations?user=Ysk4WBwAAAAJ&hl=zh-CN&oi=ao), and [Wangmeng Zuo](https://scholar.google.com/citations?user=rUOpCEYAAAAJ&hl=zh-CN&oi=ao)
 
 [![ArXiv](https://img.shields.io/badge/Paper&Suppl-ArXiv-red.svg)]()
@@ -31,8 +29,6 @@ Experimental results show that our UniRestorer outperforms state-of-the-art all-
 
 ## Method
 
----
-
 
 <p align="center"><img src="./assets/framework.png" width="95%"></p>
 
@@ -41,8 +37,6 @@ Experimental results show that our UniRestorer outperforms state-of-the-art all-
 
 
 ## Comparisons
-
----
 
 
 <details>
@@ -75,8 +69,6 @@ More comparison resuslts can be found in supplement material or our [website](ht
 
 ## Datasets
 
----
-
 Following instructions in [DATA.md](./DATA.md) to download training and testing data.
 
 
@@ -93,8 +85,6 @@ Following instructions in [DATA.md](./DATA.md) to download training and testing 
 
 
 ## Contact & Acknowledgement
-
----
 
 If you have any questions, please contact [jblincs1996@gmail.com](jblincs1996@gmail.com).
 
@@ -113,7 +103,6 @@ Our code is based on [BasicSR](https://github.com/XPixelGroup/BasicSR) and [KAIR
 
 ## Citation
 
----
 
 If our work is helpful, you can cite our work as follows:
 ```
