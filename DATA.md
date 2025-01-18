@@ -1,7 +1,5 @@
 ## Preparing Datasets
 
----
-
 ### Deraining
 
 |       | All-in-One comparison | Single-task comparison                        |
