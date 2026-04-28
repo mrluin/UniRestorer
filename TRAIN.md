@@ -4,5 +4,5 @@ TODO
 
 # Evaluation
 
-Something is lost, this part will come in recent days.
+DACLIP checkpoints are missing, this part will come in recent days. (04.28.2026)
 
