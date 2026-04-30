@@ -27,7 +27,7 @@ if __name__ == '__main__':
     model = UniRestorer(
         daclip_model, embed_dim=512, num_feat=48, topk=1, num_experts=[1, 7, 22]
     )
-    model.load_state_dict(torch.load("./checkpoints/unirestorer_all_in_one.pth", weights_only=True)["params"])
+    model.load_state_dict(torch.load("./checkpoints/model.pth", weights_only=True)["params"])
     model = model.to('cuda')
     model.eval()
 
