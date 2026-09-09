@@ -25,7 +25,7 @@ if __name__ == '__main__':
     daclip_model, process = open_clip.create_model_from_pretrained('daclip_ViT-B-32', pretrained=daclip_checkpoint)
 
     model = UniRestorer(
-        daclip_model, embed_dim=512, num_feat=48, topk=1, num_experts=[1, 7, 22]
+        daclip_model, embed_dim=768, num_feat=48, topk=1, num_experts=[1, 7, 17]
     )
     model.load_state_dict(torch.load("./checkpoints/model.pth", weights_only=True)["params"])
     model = model.to('cuda')

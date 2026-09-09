@@ -129,7 +129,7 @@ class UniRestorer(nn.Module):
                             self.l1_experts[0], self.l1_experts[1], self.l1_experts[2], self.l1_experts[3], self.l1_experts[4], self.l1_experts[5], self.l1_experts[6],
                             self.l2_experts[0], self.l2_experts[1], self.l2_experts[2], self.l2_experts[3], self.l2_experts[4], self.l2_experts[5], self.l2_experts[6], self.l2_experts[7],
                             self.l2_experts[8], self.l2_experts[9], self.l2_experts[10], self.l2_experts[11], self.l2_experts[12], self.l2_experts[13], self.l2_experts[14], self.l2_experts[15],
-                            self.l2_experts[16], self.l2_experts[17], self.l2_experts[18], self.l2_experts[19], self.l2_experts[20], self.l2_experts[21]
+                            self.l2_experts[16], 
                             ]
 
         self.expert_indices_dict = torch.tensor([[0, 1, 8],  # 0
@@ -138,62 +138,58 @@ class UniRestorer(nn.Module):
                                                  [0, 2, 11],  # 3
                                                  [0, 2, 12],  # 4
                                                  [0, 2, 13],  # 5
-                                                 [0, 3, 14],  # 6
+                                                 [0, 2, 14],  # 6
                                                  [0, 3, 15],  # 7
                                                  [0, 3, 16],  # 8
-                                                 [0, 4, 17],  # 9
+                                                 [0, 3, 17],  # 9
                                                  [0, 4, 18],  # 10
-                                                 [0, 4, 19],  # 11
-                                                 [0, 4, 20],  # 12
-                                                 [0, 4, 21],  # 13
-                                                 [0, 4, 22],  # 14
-                                                 [0, 4, 23],  # 15
-                                                 [0, 5, 24],  # 16
-                                                 [0, 5, 25],  # 17
-                                                 [0, 6, 26],  # 18
-                                                 [0, 6, 27],  # 19
-                                                 [0, 7, 28],  # 20
-                                                 [0, 7, 29]   # 21
+                                                 [0, 5, 19],  # 11
+                                                 [0, 5, 20],  # 12
+                                                 [0, 6, 21],  # 13
+                                                 [0, 6, 22],  # 14
+                                                 [0, 7, 23],  # 15
+                                                 [0, 7, 24],  # 16
+                    
                                              ], dtype=torch.long).to("cuda")
 
         # leaf node router body
         self.mu = nn.Sequential(
-            nn.Linear(512, 512, bias=False),
+            nn.Linear(self.embed_dim, self.embed_dim, bias=False),
             nn.LeakyReLU(negative_slope=0.1, inplace=True),
-            nn.Linear(512, 512, bias=False),
+            nn.Linear(self.embed_dim, self.embed_dim, bias=False),
             nn.LeakyReLU(negative_slope=0.1, inplace=True),
-            nn.Linear(512, 512, bias=False),
+            nn.Linear(self.embed_dim, self.embed_dim, bias=False),
             nn.LeakyReLU(negative_slope=0.1, inplace=True),
-            nn.Linear(512, 512, bias=False),
+            nn.Linear(self.embed_dim, self.embed_dim, bias=False),
             nn.LeakyReLU(negative_slope=0.1, inplace=True),
-            nn.Linear(512, 512, bias=False),
-            nn.BatchNorm1d(512)
+            nn.Linear(self.embed_dim, self.embed_dim, bias=False),
+            nn.BatchNorm1d(self.embed_dim)
 
         )
 
         self.sigma = nn.Sequential(
-            nn.Linear(512, 512, bias=False),
+            nn.Linear(self.embed_dim, self.embed_dim, bias=False),
             nn.LeakyReLU(negative_slope=0.1, inplace=True),
-            nn.Linear(512, 512, bias=False),
+            nn.Linear(self.embed_dim, self.embed_dim, bias=False),
             nn.LeakyReLU(negative_slope=0.1, inplace=True),
-            nn.Linear(512, 512, bias=False),
+            nn.Linear(self.embed_dim, self.embed_dim, bias=False),
             nn.LeakyReLU(negative_slope=0.1, inplace=True),
-            nn.Linear(512, 512, bias=False),
+            nn.Linear(self.embed_dim, self.embed_dim, bias=False),
             nn.LeakyReLU(negative_slope=0.1, inplace=True),
-            nn.Linear(512, 512, bias=False),
-            nn.BatchNorm1d(512)
+            nn.Linear(self.embed_dim, self.embed_dim, bias=False),
+            nn.BatchNorm1d(self.embed_dim)
         )
 
         self.gamma = nn.Parameter(torch.ones(1) * 1e-4)
         self.beta = nn.Parameter(torch.ones(1) * (-7))
 
         self.lf_gate = nn.Sequential(
-            nn.Linear(512,
+            nn.Linear(self.embed_dim,
                       2 * self.num_lf_nodes if self.noisy_topk_gating else self.num_lf_nodes,
                       bias=False)
         )
         self.layer_gate = nn.Sequential(
-            nn.Linear(512,
+            nn.Linear(self.embed_dim,
                       2 * self.num_layers if self.noisy_topk_gating else self.num_layers,
                       bias=False)
         )
@@ -213,7 +209,7 @@ class UniRestorer(nn.Module):
 
         l0_ckpt_path_list = self.ckpt_path_list[:1]
         l1_ckpt_path_list = self.ckpt_path_list[1:8]
-        l2_ckpt_path_list = self.ckpt_path_list[8:30]
+        l2_ckpt_path_list = self.ckpt_path_list[8:]
 
         for expert, path in zip(self.l0_experts, l0_ckpt_path_list):
             expert.load_state_dict(torch.load(path, weights_only=True)["params"])
