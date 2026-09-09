@@ -44,8 +44,6 @@ Training and evaluation instructions are provided in [TRAIN.md](./TRAIN.md).
 
 ## Acknowledgement
 
-Thanks the help of [Zhilu Zhang](https://scholar.google.com/citations?user=8pIq2N0AAAAJ&hl=zh-CN&oi=ao).
-
 Our code is mainly based on [BasicSR](https://github.com/XPixelGroup/BasicSR) and [KAIR](https://github.com/cszn/KAIR).
 We thank to the following image restoration works for their awesome backbones and code repos:
 
