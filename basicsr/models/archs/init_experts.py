@@ -63,7 +63,7 @@ def init_experts_three_layers(l0_experts, l1_experts, l2_experts):
                                         r=[8,8,8,8],
                                         lora_alpha=[16,16,16,16]))
 
-    for i in range(10):
+    for i in range(4):
         l2_experts.append(Restormer(inp_channels=3,
                                     out_channels=3,
                                     dim=48,
@@ -91,8 +91,3 @@ def init_experts_three_layers(l0_experts, l1_experts, l2_experts):
                                       dec_blk_nums=[1, 1, 1, 1]))
 
     return l0_experts, l1_experts, l2_experts
-
-
-
-
-

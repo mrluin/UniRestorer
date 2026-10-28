@@ -22,7 +22,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     daclip_checkpoint = './checkpoints/daclip.pt'
-    daclip_model, process = open_clip.create_model_from_pretrained('daclip_ViT-B-32', pretrained=daclip_checkpoint)
+    daclip_model, process = open_clip.create_model_from_pretrained('daclip_ViT-L-14', pretrained=daclip_checkpoint)
 
     model = UniRestorer(
         daclip_model, embed_dim=768, num_feat=48, topk=1, num_experts=[1, 7, 17]

@@ -365,12 +365,3 @@ class UniRestorer(nn.Module):
         aux_loss = cv_loss
 
         return y[:, :, :ori_H, :ori_W], mu, logvar, aux_loss
-
-
-
-
-
-
-
-
-
